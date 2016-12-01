@@ -1,10 +1,10 @@
 /**
  * Provides access to playing music using ABC notation
  */
-//% color=290 weight=100
+//% color=#E01818 weight=100
 namespace Song {
 
-    //% blockId=device_show_number
+    //% blockId=song_abc_music
     //% block="play|notes %musicString|at tempo %musicTempo|with standard note length 1 / %standardLength |in key %keySignature"
     export function abcMusic(musicString: string, musicTempo: number = 40, standardLength: number = 4, keySignature: string): void {
         music.setTempo(musicTempo)
@@ -69,7 +69,7 @@ namespace Song {
             }
 
             if (musicString[item + 1] != '/' && musicString[item] != '/') {
-                basic.pause(50)
+                basic.pause(25)
             }
         }
     }
