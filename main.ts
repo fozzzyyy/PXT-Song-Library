@@ -1,4 +1,4 @@
-function abcMusic(musicString = '', musicTempo = 40, standardLength = 4) {
+function abcMusic(musicString = '', musicTempo = 40, standardLength = 4, keySignature) {
     music.setTempo(musicTempo)
 
     let currentLength = standardLength
@@ -15,13 +15,21 @@ function abcMusic(musicString = '', musicTempo = 40, standardLength = 4) {
         if (musicString[item] == '2' || musicString[item] == '4' || musicString[item] == '/') {
             basic.pause(0)
         } else if (musicString[item] == 'C') {
-            music.playTone(Note.C4, music.beat(currentLength))
+            if (keySignature == 'D') {
+                music.playTone(Note.CSharp4, music.beat(currentLength))
+            } else {
+                music.playTone(Note.C4, music.beat(currentLength))
+            }
         } else if (musicString[item] == 'D') {
             music.playTone(Note.D4, music.beat(currentLength))
         } else if (musicString[item] == 'E') {
             music.playTone(Note.E4, music.beat(currentLength))
         } else if (musicString[item] == 'F') {
-            music.playTone(Note.F4, music.beat(currentLength))
+            if (keySignature == 'D') {
+                music.playTone(Note.FSharp4, music.beat(currentLength))
+            } else {
+                music.playTone(Note.F4, music.beat(currentLength))
+            }
         } else if (musicString[item] == 'G') {
             music.playTone(Note.G4, music.beat(currentLength))
         } else if (musicString[item] == 'A') {
@@ -29,13 +37,21 @@ function abcMusic(musicString = '', musicTempo = 40, standardLength = 4) {
         } else if (musicString[item] == 'B') {
             music.playTone(Note.B4, music.beat(currentLength))
         } else if (musicString[item] == 'c') {
-            music.playTone(Note.C5, music.beat(currentLength))
+            if (keySignature == 'D') {
+                music.playTone(Note.CSharp5, music.beat(currentLength))
+            } else {
+                music.playTone(Note.C5, music.beat(currentLength))
+            }
         } else if (musicString[item] == 'd') {
             music.playTone(Note.D5, music.beat(currentLength))
         } else if (musicString[item] == 'e') {
             music.playTone(Note.E5, music.beat(currentLength))
         } else if (musicString[item] == 'f') {
-            music.playTone(Note.F5, music.beat(currentLength))
+            if (keySignature == 'D') {
+                music.playTone(Note.FSharp5, music.beat(currentLength))
+            } else {
+                music.playTone(Note.F5, music.beat(currentLength))
+            }
         } else if (musicString[item] == 'g') {
             music.playTone(Note.G5, music.beat(currentLength))
         } else if (musicString[item] == 'a') {
