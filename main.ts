@@ -65,13 +65,3 @@ function abcMusic(musicString = '', musicTempo = 40, standardLength = 4, keySign
         }
     }
 }
-let frereJacques = "cdeccdecefg2efg2g/a/g/f/ecg/a/g/f/eccGc2cGc2"
-let jingleBells = "EEE2EEE2EGCDE4FFFFFEE2EDDED2G2"
-let deckTheHalls = "A2GF2E2D2E2F2D2EFGEF2ED2C2D4A2GF2E2D2E2F2D2EFGEF2ED2C2D4E2FG2E2F2GA2E2FGA2Bcd2c2B2A4A2GF2E2D2E2F2D2BBBBA2GF2E2D4"
-let standardTempo = 40
-let standardLength = 4
-abcMusic(frereJacques, standardTempo, standardLength, 'G')
-basic.pause(2000)
-//abcMusic(jingleBells, standardTempo * 2, standardLength)
-basic.pause(2000)
-//abcMusic(deckTheHalls, 40, 8)
