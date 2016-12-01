@@ -25,7 +25,7 @@ function abcMusic(musicString = '', musicTempo = 40, standardLength = 4, keySign
         } else if (musicString[item] == 'E') {
             music.playTone(Note.E4, music.beat(currentLength))
         } else if (musicString[item] == 'F') {
-            if (keySignature == 'D') {
+            if (keySignature == 'D' || keySignature == 'G') {
                 music.playTone(Note.FSharp4, music.beat(currentLength))
             } else {
                 music.playTone(Note.F4, music.beat(currentLength))
@@ -47,7 +47,7 @@ function abcMusic(musicString = '', musicTempo = 40, standardLength = 4, keySign
         } else if (musicString[item] == 'e') {
             music.playTone(Note.E5, music.beat(currentLength))
         } else if (musicString[item] == 'f') {
-            if (keySignature == 'D') {
+            if (keySignature == 'D' || keySignature == 'G') {
                 music.playTone(Note.FSharp5, music.beat(currentLength))
             } else {
                 music.playTone(Note.F5, music.beat(currentLength))
@@ -70,7 +70,7 @@ let jingleBells = "EEE2EEE2EGCDE4FFFFFEE2EDDED2G2"
 let deckTheHalls = "A2GF2E2D2E2F2D2EFGEF2ED2C2D4A2GF2E2D2E2F2D2EFGEF2ED2C2D4E2FG2E2F2GA2E2FGA2Bcd2c2B2A4A2GF2E2D2E2F2D2BBBBA2GF2E2D4"
 let standardTempo = 40
 let standardLength = 4
-abcMusic(frereJacques, standardTempo, standardLength, 'D')
+abcMusic(frereJacques, standardTempo, standardLength, 'G')
 basic.pause(2000)
 //abcMusic(jingleBells, standardTempo * 2, standardLength)
 basic.pause(2000)
